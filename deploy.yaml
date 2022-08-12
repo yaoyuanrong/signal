@@ -1,0 +1,19 @@
+# deploy.yaml
+
+apps:
+  - script: ./index.js #入口文件
+    name: 'app'        #程序名称
+    env: 
+      COMMON_VARIABLE: true
+    env_production:
+      NODE_ENV: production
+
+deploy: 
+  production:
+    user: lentoo
+    host: http://192.168.139.41
+    port: 4000
+    ref: origin/master
+    env: 
+      NODE_ENV: production
+    
