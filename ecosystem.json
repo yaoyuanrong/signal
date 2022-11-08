@@ -19,9 +19,8 @@
       "port": "22",
       "ref": "origin/main",
       "repo": "https://github.com/yaoyuanrong/signal.git",
-      "path": "/www/wwwroot/signal",
+      "path": "/www/wwwroot/signal", 
       "ssh_options": "StrictHostKeyChecking=no",
-      "post-deploy": "git pull && npm install &&  pm2 reload deploy.yaml --env production",
       "env": {
         "NODE_ENV": "production"
       }
