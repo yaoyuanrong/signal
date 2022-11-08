@@ -47,6 +47,9 @@ wss.on('connection', function connection(ws, request) {
       if (ws.sendRemote) {
         ws.sendRemote('control-quit-fresh')
       }
+    } else if (event === 'send-clipboard') {
+      console.log('on-clipboard', data)
+      ws.sendRemote('on-clipboard', data)
     }
   })
 
