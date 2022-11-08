@@ -1,0 +1,29 @@
+
+{
+  "apps":[
+    {
+      "name": "signal",
+      "script": "index.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user":"root",
+      "host": ["123.57.14.193"],
+      "port": "22",
+      "ref": "origin/main",
+      "repo": "git@github.com:yaoyuanrong/signal.git",
+      "path": "/www/wwwroot/signal",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
